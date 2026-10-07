@@ -2,7 +2,7 @@
 title: "Titel der Präsentation"
 subtitle: "Untertitel der Präsentation – gern auch über zwei Zeilen"
 author: "Prof. Dr. Samuel Merk"
-date: "Wintersemester 2026/27"
+semester: "Wintersemester 2026/27"   # freier Text; alternativ date: last-modified
 execute:
   echo: false
 format:

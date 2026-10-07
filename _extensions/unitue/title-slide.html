@@ -9,7 +9,7 @@
       $if(title)$<h2 class="title">$title$</h2>$endif$
       $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
       $if(by-author)$<p class="author">$for(by-author)$$it.name.literal$$sep$ &amp; $endfor$</p>$endif$
-      $if(date)$<p class="date">$date$</p>$endif$
+      $if(semester)$<p class="date">$semester$</p>$elseif(date)$<p class="date">$date$</p>$endif$
       $if(institute)$<p class="institute">$if(faculty)$$faculty$ · $endif$$institute$</p>$endif$
     </div>
   </div>

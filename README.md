@@ -39,8 +39,9 @@ format:
 
 Das Layout ist an die Folien der VL Forschungsmethoden (C. Parrisius) angelehnt: zweispaltige
 Titelfolie mit rundem Bild (Standard: Alte Aula, eigenes Bild über `title-image`), große
-Überschriften in Karminrot, Logo unten rechts. `date` darf freier Text sein
-(z. B. „Wintersemester 2026/27“); für echte Datumsangaben `date-format: long` setzen.
+Überschriften in Karminrot, Logo unten rechts. Für freien Text unter dem Namen
+`semester: "Wintersemester 2026/27"` verwenden (Quarto würde ihn unter `date` als Datum
+interpretieren); alternativ `date: last-modified` mit `date-format: long`.
 Kapiteltrennseiten entstehen über `#`-Überschriften, Inhaltsfolien über `##`.
 
 ## Optionen
