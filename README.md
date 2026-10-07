@@ -45,7 +45,7 @@ interpretieren); alternativ `date: last-modified` mit `date-format: long`.
 Kapiteltrennseiten entstehen über `#`-Überschriften, Inhaltsfolien über `##`.
 
 Mit `titel-qr: "https://…"` erscheint auf der Titelfolie statt des Bildes ein QR-Code
-zur angegebenen Adresse (quadratischer Rahmen mit runden Ecken, URL darunter). Der Code wird
+zur angegebenen Adresse (Karminrot, quadratischer Rahmen mit runden Ecken). Der Code wird
 im Browser mit [qrcode.js](https://github.com/davidshimjs/qrcodejs) erzeugt; mit
 `embed-resources: true` wird die Bibliothek eingebettet und funktioniert auch offline.
 
