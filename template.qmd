@@ -1,0 +1,91 @@
+---
+title: "Titel des Berichts"
+subtitle: "Ein Quarto-Format im Corporate Design der Eberhard Karls Universität Tübingen – angelehnt an Lumo."
+author: "Prof. Dr. Samuel Merk"
+date: last-modified
+format:
+  unitue-html:
+    # Alle folgenden Optionen sind optional
+    institute: "Institut für Erziehungswissenschaft"
+    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+    github-repo: "https://github.com/samuelmerk/unitue-lumo"
+    self-contained: true
+    # bg-image: "bild.jpg"      # Bildleiste unterhalb des Logos
+    # primary-color: "#0069AA"  # Akzentfarbe überschreiben
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(ggplot2)
+
+# Kategoriale Palette nach CD der Universität Tübingen (S. 34/35).
+# Reihenfolge auf Unterscheidbarkeit bei Farbsehschwäche optimiert
+# (min. ΔE2000 unter Deuter-/Prot-/Tritanopie: 4 Farben 14,3; 8 Farben 11,0).
+# Ab 5 Gruppen zusätzlich Form oder Linientyp verwenden.
+ut_palette <- c(
+  karminrot = "#A51E37", mattgold = "#B4A069", anthrazit = "#32414B",
+  blau = "#0069AA", hellblau = "#50AAC8", violett = "#AF6E96",
+  ziegel = "#C8503C", ocker = "#D29600"
+)
+scale_colour_ut <- function(...) scale_colour_manual(values = unname(ut_palette), ...)
+scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ...)
+```
+
+## Einleitung
+
+Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund.
+
+::: {.column-margin}
+Randnotizen eignen sich für Hinweise, Quellen oder kleine Abbildungen.
+:::
+
+## Ergebnisse
+
+### Eine Abbildung
+
+```{r}
+#| label: fig-beispiel
+#| fig-cap: "Beispielabbildung in den Farben der Universität Tübingen."
+ggplot(mpg, aes(displ, hwy, colour = drv)) +
+  geom_point(size = 2, alpha = 0.8) +
+  scale_colour_ut() +
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb") +
+  theme_minimal(base_family = "Arial")
+```
+
+### Tabsets
+
+::: {.panel-tabset .nav-pills}
+
+## Tabelle
+
+```{r}
+knitr::kable(head(mtcars[, 1:5]))
+```
+
+## Zusammenfassung
+
+```{r}
+summary(mtcars$mpg)
+```
+
+:::
+
+## Hinweise
+
+::: {.callout-note}
+Ein Hinweis in Blau (Sekundärfarbe).
+:::
+
+::: {.callout-tip}
+Ein Tipp in Hellgrün (Sekundärfarbe).
+:::
+
+::: {.callout-important}
+Etwas Wichtiges in Karminrot.
+:::
+
+::: {.callout-warning}
+Eine Warnung in Ocker.
+:::
