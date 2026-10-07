@@ -71,6 +71,32 @@ $callout-color-caution:   $ut-ziegel;
   max-width: none;
   max-height: none;
 }
+// QR-Code statt Titelbild (Option titel-qr): quadratischer Rahmen mit runden Ecken
+.reveal #title-slide .ut-qr-frame {
+  aspect-ratio: 1 / 1;
+  border: 3pt solid $ut-karminrot;
+  border-radius: 22px;
+  padding: 14pt;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.reveal #title-slide .ut-qr canvas {
+  display: none !important;
+}
+.reveal #title-slide .ut-qr img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+}
+.reveal #title-slide .ut-qr-url {
+  font-size: 0.45em;
+  color: $ut-anthrazit;
+  margin-top: 0.6em;
+  word-break: break-all;
+}
 .reveal #title-slide h2.title {
   color: $ut-karminrot;
   font-size: 1.55em;
@@ -133,7 +159,8 @@ $callout-color-caution:   $ut-ziegel;
 }
 
 // ---------------------------------------------------------- Logo, Fußzeile, Nummer
-// Weißes Feld mit Schutzraum hinter der WBM
+// WBM auf der getönten Hintergrundfarbe (bewusste Abweichung von CD S. 5,
+// das für die rote WBM weißen Untergrund vorsieht)
 .reveal .slide-logo {
   height: 58px !important;
   max-height: 58px !important;
@@ -141,7 +168,7 @@ $callout-color-caution:   $ut-ziegel;
   right: 0 !important;
   width: auto !important;
   max-width: none !important;
-  background: #ffffff;
+  background: transparent;
   padding: 8px 14px 6px 14px;
   box-sizing: border-box;
 }

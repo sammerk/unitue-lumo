@@ -44,6 +44,11 @@ Titelfolie mit rundem Bild (Standard: Alte Aula, eigenes Bild über `title-image
 interpretieren); alternativ `date: last-modified` mit `date-format: long`.
 Kapiteltrennseiten entstehen über `#`-Überschriften, Inhaltsfolien über `##`.
 
+Mit `titel-qr: "https://…"` erscheint auf der Titelfolie statt des Bildes ein QR-Code
+zur angegebenen Adresse (quadratischer Rahmen mit runden Ecken, URL darunter). Der Code wird
+im Browser mit [qrcode.js](https://github.com/davidshimjs/qrcodejs) erzeugt; mit
+`embed-resources: true` wird die Bibliothek eingebettet und funktioniert auch offline.
+
 Der Folienhintergrund ist leicht abgedunkelt (6 % Anthrazit, #F3F4F4). Damit die rote
 Wort-Bild-Marke CD-konform auf Weiß steht, liegt sie auf einem eigenen weißen Feld.
 `slides.qmd` setzt ein ggplot-Theme mit transparentem Hintergrund, damit Plots sich einfügen.
