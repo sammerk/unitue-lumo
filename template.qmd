@@ -48,10 +48,10 @@ Randnotizen eignen sich für Hinweise, Quellen oder kleine Abbildungen.
 ```{r}
 #| label: fig-beispiel
 #| fig-cap: "Beispielabbildung in den Farben der Universität Tübingen."
-ggplot(mpg, aes(displ, hwy, colour = drv)) +
+ggplot(mpg, aes(displ, hwy, colour = drv, shape = drv)) +
   geom_point(size = 2, alpha = 0.8) +
   scale_colour_ut() +
-  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb") +
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb", shape = "Antrieb") +
   theme_minimal(base_family = "Arial")
 ```
 
