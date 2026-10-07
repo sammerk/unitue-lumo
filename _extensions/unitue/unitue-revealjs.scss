@@ -24,12 +24,14 @@ $presentation-heading-letter-spacing: -0.01em;
 $presentation-h2-font-size: 1.55em;
 $presentation-h3-font-size: 0.95em;
 
-// Die rote Wort-Bild-Marke darf nur auf Weiß stehen (CD S. 5).
-$body-bg: #ffffff;
+// Leicht abgedunkelter Hintergrund: 6 % Anthrazit in Weiß.
+// Die rote Wort-Bild-Marke steht dabei auf einem eigenen weißen Feld (CD S. 5).
+$ut-hintergrund: mix($ut-anthrazit, #ffffff, 6%);
+$body-bg: $ut-hintergrund;
 $body-color: $ut-anthrazit;
 $link-color: $ut-karminrot;
 $selection-bg: $ut-mattgold;
-$code-block-bg: #f4f5f6;
+$code-block-bg: #ffffff;
 
 $callout-color-note:      $ut-blau;
 $callout-color-tip:       $ut-hellgruen;
@@ -101,7 +103,7 @@ $callout-color-caution:   $ut-ziegel;
 }
 .reveal #title-slide .institute {
   font-style: italic;
-  color: rgba($ut-anthrazit, 0.7);
+  color: rgba($ut-anthrazit, 0.85);
   font-size: 0.55em;
   margin-top: 1em;
 }
@@ -131,13 +133,20 @@ $callout-color-caution:   $ut-ziegel;
 }
 
 // ---------------------------------------------------------- Logo, Fußzeile, Nummer
+// Weißes Feld mit Schutzraum hinter der WBM
 .reveal .slide-logo {
-  height: 46px !important;
-  max-height: 46px !important;
-  bottom: 10px !important;
-  right: 14px !important;
+  height: 58px !important;
+  max-height: 58px !important;
+  bottom: 0 !important;
+  right: 0 !important;
   width: auto !important;
   max-width: none !important;
+  background: #ffffff;
+  padding: 8px 14px 6px 14px;
+  box-sizing: border-box;
+}
+.reveal div.callout {
+  background: #ffffff;
 }
 .reveal .footer {
   color: $ut-karminrot;

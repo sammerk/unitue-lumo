@@ -44,6 +44,12 @@ Titelfolie mit rundem Bild (Standard: Alte Aula, eigenes Bild über `title-image
 interpretieren); alternativ `date: last-modified` mit `date-format: long`.
 Kapiteltrennseiten entstehen über `#`-Überschriften, Inhaltsfolien über `##`.
 
+Der Folienhintergrund ist leicht abgedunkelt (6 % Anthrazit, #F3F4F4). Damit die rote
+Wort-Bild-Marke CD-konform auf Weiß steht, liegt sie auf einem eigenen weißen Feld.
+`slides.qmd` setzt ein ggplot-Theme mit transparentem Hintergrund, damit Plots sich einfügen.
+
+Titelbild: Alte Aula der Universität Tübingen, Foto: Samuel Merk.
+
 ## Optionen
 
 | Option | Bedeutung |

@@ -12,13 +12,20 @@ format:
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     footer: "Prof. Dr. Samuel Merk · Titel der Präsentation"
     embed-resources: true
-    # title-image: "bild.jpg"   # eigenes rundes Titelbild (Standard: Alte Aula)
+    title-image: "../test.png"
 ---
 
 ```{r}
 #| label: setup
 #| include: false
 library(ggplot2)
+
+# Transparente Plots, damit der getönte Folienhintergrund durchscheint
+knitr::opts_chunk$set(dev.args = list(bg = "transparent"))
+theme_set(
+  theme_minimal(base_size = 16, base_family = "Arial") +
+    theme(plot.background = element_blank(), panel.background = element_blank())
+)
 
 # Kategoriale Palette nach CD der Universität Tübingen, CVD-optimierte Reihenfolge.
 # Ab 5 Gruppen zusätzlich Form oder Linientyp verwenden.
@@ -53,8 +60,7 @@ Hinweise und Callouts nutzen die Sekundärfarben des CD.
 ggplot(mpg, aes(displ, hwy, colour = drv, shape = drv)) +
   geom_point(size = 2.5, alpha = 0.8) +
   scale_colour_ut() +
-  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb", shape = "Antrieb") +
-  theme_minimal(base_size = 16, base_family = "Arial")
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb", shape = "Antrieb")
 ```
 
 ## Zwei Spalten
