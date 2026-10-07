@@ -8,7 +8,7 @@ format:
     # Alle folgenden Optionen sind optional
     institute: "Institut für Erziehungswissenschaft"
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
-    github-repo: "https://github.com/samuelmerk/unitue-lumo"
+    github-repo: "https://github.com/sammerk/unitue-lumo"
     particles: true           # dezentes Netz in Mattgold im Titelbereich
     self-contained: true
     # bg-image: "bild.jpg"      # Bildleiste unterhalb des Logos

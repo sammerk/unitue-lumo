@@ -8,13 +8,13 @@ angelehnt an [Lumo](https://github.com/holtzy/lumo).
 Neues Projekt aus dem Template:
 
 ```bash
-quarto use template samuelmerk/unitue-lumo
+quarto use template sammerk/unitue-lumo
 ```
 
 Nur die Extension in ein bestehendes Projekt einfügen:
 
 ```bash
-quarto add samuelmerk/unitue-lumo
+quarto add sammerk/unitue-lumo
 ```
 
 Dann im YAML-Header:
