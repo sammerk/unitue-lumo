@@ -32,6 +32,7 @@ format:
 |---|---|
 | `institute`, `faculty` | Dachmarke rechts neben der Wort-Bild-Marke |
 | `github-repo` | Blendet eine GitHub-Ecke mit Link ein |
+| `particles` | `true` blendet ein dezentes, animiertes Netz in Mattgold im Titelbereich ein (wird bei „Bewegung reduzieren“ deaktiviert) |
 | `bg-image` | Optionale Bildleiste unterhalb des Kopfbereichs |
 | `primary-color` | Akzentfarbe (Links, Tabs, TOC) überschreiben |
 | `author-label`, `date-label` | Beschriftungen im Titelblock (Standard: Autor, Datum) |

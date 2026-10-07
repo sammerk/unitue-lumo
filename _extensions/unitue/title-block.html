@@ -31,6 +31,10 @@ $endif$
   <div class="ut-colorbar-red"></div>
   <div class="ut-colorbar-gold"></div>
 
+  <div class="ut-titlearea">
+  $if(particles)$
+  <div id="ut-particles" aria-hidden="true"></div>
+  $endif$
   <div class="title-block-content">
     $if(title)$
     <h1 class="title">$title$</h1>
@@ -56,6 +60,38 @@ $endif$
     </p>
     $endif$
   </div>
+  </div>
+
+  $if(particles)$
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    (function () {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (typeof particlesJS === "undefined") return;
+      particlesJS("ut-particles", {
+        particles: {
+          number: { value: 45, density: { enable: true, value_area: 900 } },
+          color: { value: "#B4A069" },
+          shape: { type: "circle" },
+          opacity: { value: 0.55, random: false },
+          size: { value: 3, random: true },
+          line_linked: { enable: true, distance: 160, color: "#B4A069", opacity: 0.35, width: 1 },
+          move: { enable: true, speed: 1, direction: "none", random: false, straight: false, out_mode: "out" }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: false },
+            resize: true
+          },
+          modes: { grab: { distance: 160, line_linked: { opacity: 0.6 } } }
+        },
+        retina_detect: true
+      });
+    })();
+  </script>
+  $endif$
 </header>
 
 $if(github-repo)$

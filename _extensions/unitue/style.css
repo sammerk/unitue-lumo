@@ -61,6 +61,25 @@ body {
   height: 4px;
   background: var(--ut-mattgold);
 }
+/* Titelbereich mit optionalem Partikelnetz (nur unterhalb der Farbleiste,
+   die Wort-Bild-Marke bleibt auf reinem Weiß) */
+.ut-titlearea {
+  position: relative;
+  overflow: hidden;
+}
+#ut-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.ut-titlearea .title-block-content {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+.ut-titlearea .title-block-content a {
+  pointer-events: auto;
+}
 .title-block-content {
   max-width: 752px;
   margin: 0 auto;
