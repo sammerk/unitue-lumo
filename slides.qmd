@@ -1,8 +1,8 @@
 ---
 title: "Titel der Präsentation"
-subtitle: "Untertitel – maximal zwei Zeilen, linksbündig"
+subtitle: "Untertitel der Präsentation – gern auch über zwei Zeilen"
 author: "Prof. Dr. Samuel Merk"
-date: last-modified
+date: "Wintersemester 2026/27"
 execute:
   echo: false
 format:
@@ -12,7 +12,7 @@ format:
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     footer: "Prof. Dr. Samuel Merk · Titel der Präsentation"
     embed-resources: true
-    # bg-image: "bild.jpg"   # Bildleiste auf der Titelfolie
+    # title-image: "bild.jpg"   # eigenes rundes Titelbild (Standard: Alte Aula)
 ---
 
 ```{r}
@@ -33,7 +33,7 @@ scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ..
 
 # Kapiteltrennseite
 
-## Inhaltsfolie
+## Inhaltsfolie {.smaller}
 
 - Text linksbündig in Arial, Fließtext in Anthrazit
 - Zweiter Stichpunkt mit [Hervorhebung]{.ut-rot}

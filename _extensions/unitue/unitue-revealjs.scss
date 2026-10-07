@@ -1,28 +1,31 @@
 /*-- scss:defaults --*/
 
-// Primärfarben (CD Universität Tübingen, S. 34)
+// Layout angelehnt an die VL-Forschungsmethoden-Folien (C. Parrisius),
+// Farben, Schrift und Logo nach CD der Universität Tübingen (S. 23, 33, 34).
+
+// Primärfarben
 $ut-karminrot: #A51E37;
 $ut-mattgold:  #B4A069;
 $ut-anthrazit: #32414B;
 
-// Sekundärfarben (S. 35), soweit für Callouts benötigt
+// Sekundärfarben für Callouts
 $ut-blau:      #0069AA;
 $ut-hellgruen: #7DA54B;
 $ut-ziegel:    #C8503C;
 $ut-ocker:     #D29600;
 
 $font-family-sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
-$presentation-font-size-root: 32px;
+$presentation-font-size-root: 36px;
 $presentation-heading-font: $font-family-sans-serif;
-$presentation-heading-color: $ut-anthrazit;
+$presentation-heading-color: $ut-karminrot;
 $presentation-heading-font-weight: 700;
 $presentation-heading-text-transform: none;
-$presentation-heading-letter-spacing: normal;
-$presentation-h2-font-size: 1.35em;
-$presentation-h3-font-size: 1.05em;
-$presentation-title-slide-text-align: left;
+$presentation-heading-letter-spacing: -0.01em;
+$presentation-h2-font-size: 1.55em;
+$presentation-h3-font-size: 0.95em;
 
-$body-bg: #fff;
+// Die rote Wort-Bild-Marke darf nur auf Weiß stehen (CD S. 5).
+$body-bg: #ffffff;
 $body-color: $ut-anthrazit;
 $link-color: $ut-karminrot;
 $selection-bg: $ut-mattgold;
@@ -36,145 +39,85 @@ $callout-color-caution:   $ut-ziegel;
 
 /*-- scss:rules --*/
 
-// ---------------------------------------------------------- Kopfbereich
-// WBM steht laut CD (S. 23) auf allen Folien oben links.
-.reveal .slide-logo {
-  top: 16px !important;
-  left: 24px !important;
-  bottom: auto !important;
-  right: auto !important;
-  height: 52px !important;
-  max-height: 52px !important;
-  width: auto !important;
-  max-width: none !important;
-}
-.reveal .ut-slide-dachmarke {
-  position: fixed;
-  top: 22px;
-  right: 28px;
-  z-index: 2;
-  text-align: right;
-  font-size: 13px;
-  line-height: 1.35;
-  color: $ut-anthrazit;
-}
-.reveal .ut-slide-dachmarke span {
-  display: block;
-}
-.reveal .ut-slide-dachmarke .ut-institute {
-  font-weight: 700;
-}
-
-// Auf der Titelfolie übernimmt der große Kopfbereich die Rolle der WBM.
-.ut-on-title .slide-logo,
-.ut-on-title .ut-slide-dachmarke,
-.ut-on-title .footer {
-  display: none !important;
-}
-
 // ---------------------------------------------------------- Titelfolie
-.reveal .slides section#title-slide {
-  padding: 0;
-  height: 100%;
-  text-align: left;
+#title-slide {
+  text-align: center;
 }
-.reveal .ut-ts-masthead {
+#title-slide .ut-ts {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 0 28px 0;
+  gap: 1.2em;
 }
-.reveal img.ut-ts-logo {
-  height: 92px;
-  width: auto;
-  margin: 0;
+#title-slide .ut-ts-picture {
+  width: 35%;
 }
-.reveal .ut-ts-dachmarke {
-  text-align: right;
-  font-size: 0.55em;
-  line-height: 1.4;
+#title-slide .ut-ts-text {
+  width: 65%;
+  text-align: center;
 }
-.reveal .ut-ts-dachmarke span {
-  display: block;
-}
-.reveal .ut-ts-dachmarke .ut-faculty {
-  opacity: 0.75;
-}
-.reveal .ut-ts-dachmarke .ut-institute {
-  font-weight: 700;
-}
-.reveal .ut-ts-imagebar img {
+.reveal #title-slide img.picture {
   display: block;
   width: 100%;
-  height: 210px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border: 3pt solid $ut-karminrot;
+  border-radius: 50%;
+  padding: 5pt;
+  background: #fff;
   margin: 0;
+  max-width: none;
+  max-height: none;
 }
-.reveal .ut-colorbar-red {
-  height: 12px;
-  background: $ut-karminrot;
-}
-.reveal .ut-colorbar-gold {
-  height: 5px;
-  background: $ut-mattgold;
-}
-.reveal .ut-ts-content {
-  padding-top: 56px;
-}
-.reveal #title-slide h1.title {
+.reveal #title-slide h2.title {
   color: $ut-karminrot;
-  font-size: 1.85em;
+  font-size: 1.55em;
   line-height: 1.15;
-  text-align: left;
-  margin: 0 0 0.35em 0;
+  margin: 0 0 0.4em 0;
 }
 .reveal #title-slide .subtitle {
-  font-size: 0.85em;
+  font-style: italic;
+  color: rgba($ut-anthrazit, 0.7);
+  font-size: 0.8em;
   line-height: 1.35;
-  color: $ut-anthrazit;
   margin: 0;
 }
-.reveal #title-slide .ut-ts-meta {
-  font-size: 0.55em;
-  margin-top: 1.6em;
-  color: $ut-anthrazit;
-}
-.reveal #title-slide .ut-keyword {
-  color: $ut-mattgold;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.reveal #title-slide .author {
+  color: $ut-karminrot;
   font-size: 0.85em;
-  margin-right: 0.5em;
+  margin: 0.9em 0 0.2em 0;
+}
+.reveal #title-slide .author::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: $ut-karminrot;
+  margin-bottom: 0.9em;
+}
+.reveal #title-slide .date {
+  color: $ut-anthrazit;
+  font-size: 0.85em;
+  margin: 0.2em 0;
+}
+.reveal #title-slide .institute {
+  font-style: italic;
+  color: rgba($ut-anthrazit, 0.7);
+  font-size: 0.55em;
+  margin-top: 1em;
 }
 
 // ---------------------------------------------------------- Kapiteltrennseiten
 .reveal .slides section.level1 h1 {
   color: $ut-karminrot;
-  text-align: left;
   font-size: 1.9em;
-}
-.reveal .slides section.level1 h1::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 6px;
-  margin-top: 0.4em;
-  background: $ut-mattgold;
 }
 
 // ---------------------------------------------------------- Inhaltsfolien
-.reveal .slides section.level2 > h2:first-child {
-  margin-top: 2.1em;
-  margin-bottom: 0.7em;
+.reveal .slides section.level2 h3 {
+  color: $ut-karminrot;
 }
-.reveal .slides section.level2 > h2:first-child::before {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 4px;
-  background: $ut-mattgold;
-  margin-bottom: 0.35em;
+.reveal strong {
+  color: $ut-anthrazit;
 }
 .reveal ul li::marker {
   color: $ut-karminrot;
@@ -183,27 +126,30 @@ $callout-color-caution:   $ut-ziegel;
   color: $ut-karminrot;
   font-weight: 700;
 }
-
-// ---------------------------------------------------------- Fußzeile
-.reveal .footer {
-  text-align: left !important;
-  left: 64px !important;
-  right: auto !important;
-  bottom: 14px !important;
-  font-size: 14px !important;
+.reveal div.callout.callout-style-default div.callout-title p {
   color: $ut-anthrazit;
-  opacity: 0.8;
+}
+
+// ---------------------------------------------------------- Logo, Fußzeile, Nummer
+.reveal .slide-logo {
+  height: 46px !important;
+  max-height: 46px !important;
+  bottom: 10px !important;
+  right: 14px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+.reveal .footer {
+  color: $ut-karminrot;
+  font-size: 18px !important;
 }
 .reveal .slide-number {
-  color: $ut-anthrazit !important;
+  color: $ut-karminrot !important;
   background: transparent !important;
-  font-size: 14px !important;
-  top: auto !important;
-  bottom: 14px !important;
-  right: 24px !important;
-}
-.ut-on-title .slide-number {
-  display: none !important;
+  font-size: 18px !important;
+  top: 8px !important;
+  bottom: auto !important;
+  right: 14px !important;
 }
 
 // ---------------------------------------------------------- Tabellen

@@ -37,9 +37,11 @@ format:
     footer: "Name · Titel der Präsentation"
 ```
 
-Aufbau nach CD-Leitfaden (S. 23): Wort-Bild-Marke oben links auf allen Folien, Dachmarke auf
-gleicher Höhe, Titelfolie mit roter Farbleiste (optional `bg-image` als Bildleiste),
-Kapiteltrennseiten über `#`-Überschriften, Inhaltsfolien über `##`. Format 16:9 (1280 × 720).
+Das Layout ist an die Folien der VL Forschungsmethoden (C. Parrisius) angelehnt: zweispaltige
+Titelfolie mit rundem Bild (Standard: Alte Aula, eigenes Bild über `title-image`), große
+Überschriften in Karminrot, Logo unten rechts. `date` darf freier Text sein
+(z. B. „Wintersemester 2026/27“); für echte Datumsangaben `date-format: long` setzen.
+Kapiteltrennseiten entstehen über `#`-Überschriften, Inhaltsfolien über `##`.
 
 ## Optionen
 
