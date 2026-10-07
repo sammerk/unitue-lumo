@@ -1,0 +1,43 @@
+<section id="title-slide" class="ut-title-slide" data-state="ut-on-title"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <div class="ut-ts-masthead">
+    $if(logo)$
+    <img src="$logo$" class="ut-ts-logo" alt="Logo der Eberhard Karls Universität Tübingen" />
+    $endif$
+    $if(institute)$
+    <div class="ut-ts-dachmarke">
+      $if(faculty)$<span class="ut-faculty">$faculty$</span>$endif$
+      <span class="ut-institute">$institute$</span>
+    </div>
+    $endif$
+  </div>
+
+  $if(bg-image)$
+  <div class="ut-ts-imagebar"><img src="$bg-image$" alt="" /></div>
+  $endif$
+  <div class="ut-colorbar-red"></div>
+  <div class="ut-colorbar-gold"></div>
+
+  <div class="ut-ts-content">
+    $if(title)$<h1 class="title">$title$</h1>$endif$
+    $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
+    <p class="ut-ts-meta">
+      $if(by-author)$<span class="ut-keyword">$if(author-label)$$author-label$$else$Autor$endif$</span>$for(by-author)$$it.name.literal$$sep$, $endfor$$endif$
+      $if(date)$<br /><span class="ut-keyword">$if(date-label)$$date-label$$else$Datum$endif$</span>$date$$endif$
+    </p>
+  </div>
+
+  $if(institute)$
+  <!-- Dachmarke für die Inhaltsfolien: wird aus der Folie in den festen Kopfbereich verschoben -->
+  <div id="ut-dachmarke-src" class="ut-slide-dachmarke">
+    $if(faculty)$<span class="ut-faculty">$faculty$</span>$endif$
+    <span class="ut-institute">$institute$</span>
+  </div>
+  <script>
+    (function () {
+      var el = document.getElementById("ut-dachmarke-src");
+      var reveal = document.querySelector(".reveal");
+      if (el && reveal) reveal.appendChild(el);
+    })();
+  </script>
+  $endif$
+</section>

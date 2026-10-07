@@ -22,3 +22,18 @@ contributes:
       logo: ut-logo.png
       faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
       institute: "Institut für Erziehungswissenschaft"
+    revealjs:
+      lang: de
+      theme: [default, unitue-revealjs.scss]
+      template-partials:
+        - title-slide.html
+      logo: ut-logo.png
+      width: 1280
+      height: 720
+      margin: 0.06
+      center: false
+      slide-number: true
+      transition: none
+      date-format: "D. MMMM YYYY"
+      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+      institute: "Institut für Erziehungswissenschaft"

@@ -26,6 +26,21 @@ format:
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
 ```
 
+## Folien (revealjs)
+
+Das Repo enthält zusätzlich das Format `unitue-revealjs`. Eine Beispielpräsentation liegt in
+`slides.qmd`:
+
+```yaml
+format:
+  unitue-revealjs:
+    footer: "Name · Titel der Präsentation"
+```
+
+Aufbau nach CD-Leitfaden (S. 23): Wort-Bild-Marke oben links auf allen Folien, Dachmarke auf
+gleicher Höhe, Titelfolie mit roter Farbleiste (optional `bg-image` als Bildleiste),
+Kapiteltrennseiten über `#`-Überschriften, Inhaltsfolien über `##`. Format 16:9 (1280 × 720).
+
 ## Optionen
 
 | Option | Bedeutung |

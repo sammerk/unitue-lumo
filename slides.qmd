@@ -1,0 +1,77 @@
+---
+title: "Titel der Präsentation"
+subtitle: "Untertitel – maximal zwei Zeilen, linksbündig"
+author: "Prof. Dr. Samuel Merk"
+date: last-modified
+execute:
+  echo: false
+format:
+  unitue-revealjs:
+    # Alle folgenden Optionen sind optional
+    institute: "Institut für Erziehungswissenschaft"
+    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+    footer: "Prof. Dr. Samuel Merk · Titel der Präsentation"
+    embed-resources: true
+    # bg-image: "bild.jpg"   # Bildleiste auf der Titelfolie
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(ggplot2)
+
+# Kategoriale Palette nach CD der Universität Tübingen, CVD-optimierte Reihenfolge.
+# Ab 5 Gruppen zusätzlich Form oder Linientyp verwenden.
+ut_palette <- c(
+  karminrot = "#A51E37", mattgold = "#B4A069", anthrazit = "#32414B",
+  blau = "#0069AA", hellblau = "#50AAC8", violett = "#AF6E96",
+  ziegel = "#C8503C", ocker = "#D29600"
+)
+scale_colour_ut <- function(...) scale_colour_manual(values = unname(ut_palette), ...)
+scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ...)
+```
+
+# Kapiteltrennseite
+
+## Inhaltsfolie
+
+- Text linksbündig in Arial, Fließtext in Anthrazit
+- Zweiter Stichpunkt mit [Hervorhebung]{.ut-rot}
+  - Unterpunkt der Ebene 2
+  - Noch ein Unterpunkt
+- Dritter Stichpunkt
+
+::: {.callout-note}
+Hinweise und Callouts nutzen die Sekundärfarben des CD.
+:::
+
+## Abbildung
+
+```{r}
+#| fig-width: 10
+#| fig-height: 4.8
+ggplot(mpg, aes(displ, hwy, colour = drv, shape = drv)) +
+  geom_point(size = 2.5, alpha = 0.8) +
+  scale_colour_ut() +
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb", shape = "Antrieb") +
+  theme_minimal(base_size = 16, base_family = "Arial")
+```
+
+## Zwei Spalten
+
+:::: {.columns}
+::: {.column width="50%"}
+**Links**
+
+- Argument A
+- Argument B
+:::
+::: {.column width="50%"}
+**Rechts**
+
+| Gruppe | M | SD |
+|---|---|---|
+| A | 3.2 | 0.8 |
+| B | 3.9 | 0.7 |
+:::
+::::
