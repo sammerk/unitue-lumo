@@ -12,7 +12,7 @@ format:
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     footer: "Prof. Dr. Samuel Merk · Titel der Präsentation"
     embed-resources: true
-    # titel-qr: "https://uni-tuebingen.de"   # QR-Code statt Titelbild
+    titel-qr: "https://uni-tuebingen.de"   # QR-Code statt Titelbild
     # title-image: "../test.png"
 ---
 
