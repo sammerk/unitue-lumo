@@ -83,4 +83,4 @@ Protanopie. Ab etwa 5 Gruppen sollten zusätzlich Formen oder Linientypen genutz
 
 Das Corporate Design der Universität Tübingen und die Wort-Bild-Marke dürfen laut
 CD-Leitfaden nur von Beschäftigten der Universität verwendet werden, die im Namen der
-Universität kommunizieren. Fragen zum CD: design@cd.uni-tuebingen.de
+Universität kommunizieren.

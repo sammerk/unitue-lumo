@@ -239,6 +239,119 @@ thead {
   border-bottom: 2px solid var(--ut-anthrazit);
 }
 
+/* ------------------------------------------------ tt() / tinytable --- */
+.tinytable,
+.tabulator {
+  font-family: inherit;
+  color: var(--ut-anthrazit);
+}
+/* Statische tinytable-Ausgabe */
+table.tinytable {
+  font-size: 0.9em;
+  margin-bottom: 1.5rem;
+}
+table.tinytable thead th {
+  border-bottom: 2px solid var(--ut-akzent) !important;
+  color: var(--ut-akzent);
+  font-weight: 700;
+  background: #fff;
+}
+table.tinytable tbody td {
+  border-bottom: 1px solid #e3e6e8;
+}
+table.tinytable tbody tr:hover td {
+  background: rgba(165, 30, 55, 0.04);
+}
+/* Tabulator-Modus (theme_html(engine = "tabulator")) */
+.tabulator {
+  border: 1px solid var(--ut-akzent);
+  border-radius: 2px;
+  background: #fff;
+  font-size: 0.9em;
+}
+.tabulator .tabulator-header,
+.tabulator .tabulator-headers {
+  border-bottom: 2px solid var(--ut-akzent);
+  background: #fff;
+}
+.tabulator .tabulator-col,
+.tabulator .tabulator-col-content {
+  color: var(--ut-akzent);
+  font-weight: 700;
+  background: #fff;
+}
+.tabulator .tabulator-cell {
+  border-bottom: 1px solid #e3e6e8;
+  padding: 6px 10px;
+}
+.tabulator .tabulator-row {
+  background: #fff;
+  min-height: unset;
+}
+.tabulator .tabulator-row:nth-child(even) {
+  background: rgba(50, 65, 75, 0.03);
+}
+.tabulator .tabulator-row.tabulator-row-odd:hover,
+.tabulator .tabulator-row.tabulator-row-even:hover,
+.tabulator .tabulator-row:hover {
+  background: rgba(165, 30, 55, 0.05);
+}
+/* Suchfeld, Sortier- und Paginierungselemente in Karminrot */
+.tinytable-wrap input[id^="search_"],
+input[id^="search_"] {
+  border: 1px solid #e3e6e8;
+  border-radius: 2px;
+  max-width: 320px;
+  font-size: 0.85em;
+}
+input[id^="search_"]:focus {
+  outline: 2px solid var(--ut-akzent);
+  outline-offset: 1px;
+  box-shadow: none;
+  border-color: var(--ut-akzent);
+}
+.tabulator input.tabulator-input,
+.tabulator input[type="text"],
+.tabulator input[type="search"] {
+  border: 1px solid #e3e6e8;
+  border-radius: 2px;
+  padding: 3px 8px;
+  font-size: 0.85em;
+}
+.tabulator input.tabulator-input:focus,
+.tabulator input:focus-visible {
+  outline: 2px solid var(--ut-akzent);
+  outline-offset: 1px;
+}
+.tabulator .tabulator-page {
+  color: var(--ut-akzent);
+  border-color: var(--ut-akzent);
+  border-radius: 2px;
+  background: #fff;
+  margin-right: 4px;
+}
+.tabulator .tabulator-page:hover {
+  background: rgba(165, 30, 55, 0.08);
+}
+.tabulator .tabulator-page.active {
+  background: var(--ut-akzent);
+  border-color: var(--ut-akzent);
+  color: #fff;
+}
+.tabulator .tabulator-page:disabled {
+  color: var(--ut-akzent);
+  opacity: 0.4;
+}
+.tabulator .tabulator-arrow {
+  border-bottom-color: var(--ut-anthrazit);
+  border-top-color: var(--ut-anthrazit);
+}
+.tabulator .tabulator-sort-asc .tabulator-arrow,
+.tabulator .tabulator-sort-desc .tabulator-arrow {
+  border-bottom-color: var(--ut-akzent);
+  border-top-color: var(--ut-akzent);
+}
+
 /* ---------------------------------------------------- GitHub-Ecke --- */
 .octocat-container {
   fill: var(--ut-anthrazit);

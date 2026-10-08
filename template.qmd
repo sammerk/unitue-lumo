@@ -90,3 +90,16 @@ Etwas Wichtiges in Karminrot.
 ::: {.callout-warning}
 Eine Warnung in Ocker.
 :::
+
+## Interaktive Tabelle
+
+```{r}
+library(tinytable)
+
+tt(mtcars) |>
+  theme_html(
+    engine = "tabulator",
+    tabulator_search = "top",
+    tabulator_pagination = TRUE
+  )
+```
