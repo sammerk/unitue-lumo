@@ -76,11 +76,11 @@ summary(mtcars$mpg)
 ## Hinweise
 
 ::: {.callout-note}
-Ein Hinweis in Blau (Sekundärfarbe).
+Ein Hinweis in blau (Sekundärfarbe).
 :::
 
 ::: {.callout-tip}
-Ein Tipp in Hellgrün (Sekundärfarbe).
+Ein Tipp in hellgrün (Sekundärfarbe).
 :::
 
 ::: {.callout-important}
