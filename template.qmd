@@ -20,10 +20,6 @@ format:
 #| include: false
 library(ggplot2)
 
-# Kategoriale Palette nach CD der Universität Tübingen (S. 34/35).
-# Reihenfolge auf Unterscheidbarkeit bei Farbsehschwäche optimiert
-# (min. ΔE2000 unter Deuter-/Prot-/Tritanopie: 4 Farben 14,3; 8 Farben 11,0).
-# Ab 5 Gruppen zusätzlich Form oder Linientyp verwenden.
 ut_palette <- c(
   karminrot = "#A51E37", mattgold = "#B4A069", anthrazit = "#32414B",
   blau = "#0069AA", hellblau = "#50AAC8", violett = "#AF6E96",
@@ -84,11 +80,11 @@ Ein Tipp in hellgrün (Sekundärfarbe).
 :::
 
 ::: {.callout-important}
-Etwas Wichtiges in Karminrot.
+Etwas Wichtiges in karminrot.
 :::
 
 ::: {.callout-warning}
-Eine Warnung in Ocker.
+Eine Warnung in ocker.
 :::
 
 ## Interaktive Tabelle

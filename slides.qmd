@@ -11,7 +11,7 @@ format:
     institute: "Institut für Erziehungswissenschaft"
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     footer: "Prof. Dr. Samuel Merk · Titel der Präsentation"
-    embed-resources: true
+    embed-resources: false
     titel-qr: "https://uni-tuebingen.de"   # QR-Code statt Titelbild
     # title-image: "../test.png"
 ---
@@ -82,3 +82,21 @@ ggplot(mpg, aes(displ, hwy, colour = drv, shape = drv)) +
 | B | 3.9 | 0.7 |
 :::
 ::::
+
+# Quiz
+
+## Verständnisfrage {.smaller .quiz-slide}
+
+`webex.js` (genutzt von [exams2forms](https://www.r-exams.org/tutorials/exams2forms/))
+verträgt sich nicht mit reveal.js – siehe
+[dieser Stack-Overflow-Thread](https://stackoverflow.com/questions/79561442/exams2forms-in-quarto-reveal-js).
+Dynamische R/exams-Übungen werden deshalb **nicht** direkt in die Folie
+gerendert, sondern als eigenständige HTML-Seite im Ordner `aufgaben/` erzeugt
+und per `<iframe>` eingebettet (siehe `aufgaben/swisscapital.qmd` sowie
+[dieses Beispiel](https://github.com/sammerk/VL-Forschungsmethoden-SoSe25/blob/master/Block01-Methodologie/Folien/index.qmd)).
+Dazu muss `aufgaben/swisscapital.qmd` separat gerendert werden (z. B. `quarto
+render aufgaben/swisscapital.qmd`), bevor bzw. während die Folien gerendert werden.
+
+```{=html}
+<iframe src="aufgaben/swisscapital.html" title="Quizfrage"></iframe>
+```

@@ -55,6 +55,54 @@ Wort-Bild-Marke CD-konform auf Weiß steht, liegt sie auf einem eigenen weißen 
 
 Titelbild: Alte Aula der Universität Tübingen, Foto: Samuel Merk.
 
+## Quiz (exams2forms)
+
+Dynamische Übungen aus dem R-Paket [R/exams](https://www.R-exams.org) lassen sich über
+das Paket [exams2forms](https://www.r-exams.org/tutorials/exams2forms/) als interaktives
+Quiz im CD der Universität Tübingen einbetten, z. B. für Selbstlerntests.
+
+```r
+library("exams2forms")
+exams2forms(c("uebung1.Rmd", "uebung2.Rmd"), n = 3)
+```
+
+Der R-Chunk benötigt `#| results: asis`. Beide Pakete müssen installiert sein
+(`install.packages(c("exams", "exams2forms"))`). Die Button-Beschriftungen
+(Prüfen, Lösung, Nächste Frage) sind auf Deutsch lokalisiert; Farben (richtig:
+Hellgrün, falsch: Ziegel, neutral/Rahmen: Blau) und Formsprache (scharfe Kanten,
+Arial) sind an das CD angepasst – siehe `_extensions/unitue/webex.css` und
+`webex.js`. Beide Dateien stammen aus dem `exams2forms`-Paket und wurden für das
+CD angepasst (`:root`-Variablen und Beschriftungen am Dateianfang).
+
+### In `unitue-html`
+
+Funktioniert direkt: `webex.css`/`webex.js` sind Teil des `unitue-html`-Formats.
+Ein eigenständiges Beispiel mit mehreren Übungen liegt in `quiz.qmd`.
+
+### In `unitue-revealjs` (Folien)
+
+`webex.js` verträgt sich **nicht** mit reveal.js (Navigation/Tastaturkürzel
+brechen, siehe [dieser Stack-Overflow-Thread](https://stackoverflow.com/questions/79561442/exams2forms-in-quarto-reveal-js)).
+`unitue-revealjs` bindet `webex.css`/`webex.js` deshalb bewusst **nicht** ein.
+
+Stattdessen wird jede Quizfrage als eigene, schlanke HTML-Seite gerendert und per
+`<iframe>` in die Folie eingebettet – analog zu
+[diesem Beispiel](https://github.com/sammerk/VL-Forschungsmethoden-SoSe25/blob/master/Block01-Methodologie/Folien/index.qmd):
+
+1. Quiz-Seite z. B. unter `aufgaben/<name>.qmd` anlegen (Vorlage:
+   `aufgaben/swisscapital.qmd`). Diese nutzt bewusst das schlichte `html`-Format
+   statt `unitue-html`, da der Kopfbereich (Logo, Dachmarke, Inhaltsverzeichnis,
+   Fußzeile) in einem kleinen iframe zu viel Platz beanspruchen würde; Farben/Schrift
+   kommen weiterhin über `unitue.scss` und `webex.css` aus dem CD.
+2. Seite separat rendern: `quarto render aufgaben/<name>.qmd`.
+3. In der Folie einbetten:
+
+   ```html
+   <iframe width="900" height="480" src="aufgaben/<name>.html" title="Quizfrage"></iframe>
+   ```
+
+Siehe das Beispiel am Ende von `slides.qmd`.
+
 ## Optionen
 
 | Option | Bedeutung |

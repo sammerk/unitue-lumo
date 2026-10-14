@@ -1,0 +1,46 @@
+---
+lang: de
+format:
+  html:
+    theme: [cosmo, ../_extensions/unitue/unitue.scss]
+    css: ../_extensions/unitue/webex.css
+    include-after-body: ../_extensions/unitue/webex.js
+    toc: false
+    embed-resources: true
+    page-layout: full
+---
+
+```{=html}
+<style>
+/* Kein weißer Rand: Hintergrund transparent, damit der getönte
+   Folienhintergrund durchscheint; Standardabstände von Bootstrap/Quarto
+   entfernt, damit die Fragebox bündig im iframe sitzt. */
+html, body {
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+#quarto-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+main.content {
+  padding: 0.5rem !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+</style>
+```
+
+```{r}
+#| label: setup
+#| include: false
+library(exams2forms)
+edir <- system.file("exercises", package = "exams")
+```
+
+```{r}
+#| echo: false
+#| results: asis
+exams2forms("swisscapital.Rmd", n = 3, edir = edir)
+```

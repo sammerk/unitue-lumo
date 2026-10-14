@@ -15,10 +15,10 @@ contributes:
       smooth-scroll: true
       title-block-banner: true
       theme: [cosmo, unitue.scss]
-      css: style.css
+      css: [style.css, webex.css]
       template-partials:
         - title-block.html
-      include-after-body: footer.html
+      include-after-body: [footer.html, webex.js]
       logo: ut-logo.png
       faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
       institute: "Institut für Erziehungswissenschaft"

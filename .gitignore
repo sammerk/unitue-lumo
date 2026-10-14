@@ -1,6 +1,8 @@
 .quarto/
 *_files/
 template.html
+quiz.html
+aufgaben/*.html
 .Rproj.user/
 .Rhistory
 .DS_Store

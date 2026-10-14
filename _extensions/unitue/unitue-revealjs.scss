@@ -186,3 +186,24 @@ $callout-color-caution:   $ut-ziegel;
 .reveal table thead {
   border-bottom: 2px solid $ut-anthrazit;
 }
+
+// ---------------------------------------------------------- Eingebettete iframes
+// z. B. separat gerenderte Quiz-Seiten (siehe README, Abschnitt "Quiz").
+// Kein Standard-iframe-Rahmen; mit Klasse .quiz-slide auf dem Folien-Abschnitt
+// nutzt das iframe automatisch den nach Überschrift/Text verbleibenden Platz.
+// Achtung: Reveal.js setzt beim Aktivieren der Folie inline "display: block"
+// auf die Section – inline-Styles schlagen normalerweise jedem CSS-Regelsatz,
+// daher hier "display: flex !important" nötig.
+.reveal iframe {
+  border: 0;
+}
+.reveal .slides section.quiz-slide {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+}
+.reveal .slides section.quiz-slide iframe {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+}
