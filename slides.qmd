@@ -44,7 +44,7 @@ scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ..
 
 ## Inhaltsfolie {.smaller}
 
-- Text linksbündig in Arial, Fließtext in Anthrazit
+- Text linksbündig in Arial, Fließtext in Anthrazit {{< iconify octicon:rocket-16 >}}
 - Zweiter Stichpunkt mit [Hervorhebung]{.ut-rot}
   - Unterpunkt der Ebene 2
   - Noch ein Unterpunkt
