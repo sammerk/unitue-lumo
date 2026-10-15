@@ -32,5 +32,8 @@ contributes:
       title-image-alt: "Alte Aula der Universität Tübingen"
       slide-number: true
       transition: none
+      # Navigationspfeile (links/rechts unten) ein-/ausschalten:
+      # im Dokument mit `controls: false` überschreibbar
+      controls: true
       faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
       institute: "Institut für Erziehungswissenschaft"

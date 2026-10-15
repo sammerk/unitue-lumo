@@ -156,14 +156,14 @@ $callout-color-caution:   $ut-ziegel;
 // WBM auf der getönten Hintergrundfarbe (bewusste Abweichung von CD S. 5,
 // das für die rote WBM weißen Untergrund vorsieht)
 .reveal .slide-logo {
-  height: 58px !important;
-  max-height: 58px !important;
+  height: 36px !important;
+  max-height: 36px !important;
   bottom: 0 !important;
   right: 0 !important;
   width: auto !important;
   max-width: none !important;
   background: transparent;
-  padding: 8px 14px 6px 14px;
+  padding: 5px 10px 4px 10px;
   box-sizing: border-box;
 }
 .reveal div.callout {
@@ -171,7 +171,7 @@ $callout-color-caution:   $ut-ziegel;
 }
 .reveal .footer {
   color: $ut-karminrot;
-  font-size: 18px !important;
+  font-size: 13px !important;
 }
 .reveal .slide-number {
   color: $ut-karminrot !important;

@@ -113,6 +113,7 @@ Siehe das Beispiel am Ende von `slides.qmd`.
 | `bg-image` | Optionale Bildleiste unterhalb des Kopfbereichs |
 | `primary-color` | Akzentfarbe (Links, Tabs, TOC) überschreiben |
 | `author-label`, `date-label` | Beschriftungen im Titelblock (Standard: Autor, Datum) |
+| `controls` | revealjs-Format: Navigationspfeile unten links; `false` blendet sie aus (Standard: `true`) |
 
 ## Farben
 
