@@ -143,3 +143,17 @@ format:
 ```
 
 Siehe `template-typst.qmd`. Unterstützt `institute`, `faculty`, `primary-color`, `author-label`, `date-label` und `particles`.
+
+Das ORCID-Icon im Typst-Titelblock stammt aus der Schrift [Academicons](https://github.com/jpswalsh/academicons) (SIL OFL 1.1, Lizenz in `_extensions/unitue/fonts/LICENSE-academicons.txt`).
+
+## Lizenz
+
+Der eigene Code (SCSS, CSS, HTML-Partials, Typst-Templates, Beispieldokumente) steht unter der [MIT-Lizenz](LICENSE). Ausgenommen sind:
+
+| Datei / Komponente | Status |
+|---|---|
+| `ut-logo.png` (Wort-Bild-Marke) | Eigentum der Universität Tübingen, **keine** offene Lizenz; Nutzung nur für Universitätsangehörige |
+| `alte-aula.jpg` | Foto von Samuel Merk, alle Rechte vorbehalten |
+| `fonts/academicons.ttf` | Academicons, SIL OFL 1.1 (`fonts/LICENSE-academicons.txt`) |
+| `_extensions/mcanouil/iconify/` | eigene Lizenz, siehe dortige `LICENSE` |
+| `webex.js`, `webex.css` | angepasst aus dem Paket [exams2forms](https://www.R-exams.org/tutorials/exams2forms/) (Zeileis, Stauffer, Barr u. a.), **GPL-3**; dieses wiederum beruht auf [webex](https://github.com/PsyTeachR/webex) (Barr, DeBruine), CC BY-SA 4.0. Diese beiden Dateien stehen **nicht** unter MIT |

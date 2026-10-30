@@ -35,8 +35,11 @@ contributes:
         outer: {far: 8mm, width: 55mm, separation: 7mm}
         clearance: 8pt
       fontsize: 10.5pt
+      font-paths: fonts
       format-resources:
         - ut-logo.png
+        - fonts/academicons.ttf
+        - fonts/LICENSE-academicons.txt
       template-partials:
         - typst-template.typ
         - typst-show.typ

@@ -1,7 +1,15 @@
 ---
 title: "Titel des Berichts"
 subtitle: "Ein Quarto-Format im Corporate Design der Eberhard Karls Universität Tübingen – angelehnt an Lumo."
-author: "Prof. Dr. Samuel Merk"
+author:
+  - name: "Prof. Dr. Samuel Merk"
+    orcid: 0000-0003-2594-5337
+    affiliation:
+      - name: "Eberhard Karls Universität Tübingen"
+        department: "Institut für Erziehungswissenschaft"
+        city: Tübingen
+        country: Deutschland
+        url: https://uni-tuebingen.de
 date: last-modified
 format:
   unitue-typst:

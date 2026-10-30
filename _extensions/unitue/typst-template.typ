@@ -151,8 +151,21 @@
         #let keyword(k) = box(width: 18mm, text(size: 0.75em, weight: "bold", fill: ut-mattgold, tracking: 0.06em, upper(k)))
         #if authors != none and authors != () {
           keyword(author-label)
-          authors.map(a => a.name).join(", ")
+          for (i, a) in authors.enumerate() {
+            if i > 0 [, ]
+            a.name
+            if a.orcid != "" {
+              h(0.3em)
+              link("https://orcid.org/" + a.orcid, text(font: "Academicons", fill: rgb("#A6CE39"), size: 1.05em, "\u{e9d9}"))
+            }
+          }
           linebreak()
+          let affs = authors.map(a => a.affiliation).filter(a => a != [] and a != none)
+          if affs.len() > 0 {
+            h(18mm)
+            text(size: 0.85em, fill: ut-anthrazit.transparentize(25%), affs.dedup().join("; "))
+            linebreak()
+          }
         }
         #if date != none { keyword(date-label); date }
       ]
