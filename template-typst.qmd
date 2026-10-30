@@ -25,7 +25,7 @@ format:
     institute: "Institut für Erziehungswissenschaft"
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     particles: true           # statisches Netz in Mattgold im Titelbereich
-    particles-seed: 7        # andere Zahl = anderes Netz
+    particles-seed: 8        # andere Zahl = anderes Netz
     # primary-color: "#0069AA"  # Akzentfarbe überschreiben
 ---
 
