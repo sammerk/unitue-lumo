@@ -2,7 +2,7 @@
 title: "Lorem ipsum dolor sit amet"
 subtitle: "Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
 author:
-  - name: "Prof. Dr. Samuel Merk"
+  - name: "Prof. Dr. Erstautorin"
     orcid: 0000-0003-2594-5337
     affiliation:
       - name: "Eberhard Karls Universität Tübingen"
@@ -18,12 +18,12 @@ author:
         city: Tübingen
         country: Deutschland
         url: https://uni-tuebingen.de
+lang: en
 date: last-modified
+license: "CC BY 4.0"
 format:
   unitue-typst:
     # Alle folgenden Optionen sind optional
-    institute: "Institut für Erziehungswissenschaft"
-    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     particles: true           # statisches Netz in Mattgold im Titelbereich
     particles-seed: 8        # andere Zahl = anderes Netz
     # primary-color: "#0069AA"  # Akzentfarbe überschreiben

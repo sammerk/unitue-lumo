@@ -8,8 +8,6 @@ execute:
 format:
   unitue-revealjs:
     # Alle folgenden Optionen sind optional
-    institute: "Institut für Erziehungswissenschaft"
-    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     footer: "Prof. Dr. Samuel Merk · Titel der Präsentation"
     embed-resources: false
     controls: true

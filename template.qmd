@@ -6,8 +6,6 @@ date: last-modified
 format:
   unitue-html:
     # Alle folgenden Optionen sind optional
-    institute: "Institut für Erziehungswissenschaft"
-    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     github-repo: "https://github.com/sammerk/unitue-lumo"
     particles: true           # dezentes Netz in Mattgold im Titelbereich
     self-contained: true

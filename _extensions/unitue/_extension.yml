@@ -6,6 +6,8 @@ contributes:
   formats:
     html:
       lang: de
+      filters:
+        - unitue-lang.lua
       toc: true
       toc-location: left
       toc-title: " "
@@ -20,10 +22,10 @@ contributes:
         - title-block.html
       include-after-body: [footer.html, webex.js]
       logo: ut-logo.png
-      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
-      institute: "Institut für Erziehungswissenschaft"
     typst:
       lang: de
+      filters:
+        - unitue-lang.lua
       toc: false
       keep-typ: false
       papersize: a4
@@ -46,10 +48,10 @@ contributes:
         - page.typ
       ut-logo: ut-logo.png
       particles: false
-      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
-      institute: "Institut für Erziehungswissenschaft"
     revealjs:
       lang: de
+      filters:
+        - unitue-lang.lua
       theme: [default, unitue-revealjs.scss]
       template-partials:
         - title-slide.html
@@ -61,5 +63,3 @@ contributes:
       # Navigationspfeile (links/rechts unten) ein-/ausschalten:
       # im Dokument mit `controls: false` überschreibbar
       controls: true
-      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
-      institute: "Institut für Erziehungswissenschaft"

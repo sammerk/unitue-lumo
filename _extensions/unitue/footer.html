@@ -1,9 +1,15 @@
 <footer class="ut-footer">
   <div class="ut-colorbar-gold"></div>
   <p>
-    Eberhard Karls Universität Tübingen · Institut für Erziehungswissenschaft<br />
+    $if(ut-university)$$ut-university$$else$Eberhard Karls Universität Tübingen$endif$$if(institute)$ · $institute$$endif$<br />
+    $if(ut-en)$
+    Created with <a href="https://quarto.org">quarto</a> and the
+    <a href="https://github.com/sammerk/unitue-lumo">unitue</a> format
+    (inspired by <a href="https://github.com/holtzy/lumo">Lumo</a>).
+    $else$
     Erstellt mit <a href="https://quarto.org">quarto</a> und dem
     <a href="https://github.com/sammerk/unitue-lumo">unitue</a>-Format
     (inspiriert durch <a href="https://github.com/holtzy/lumo">Lumo</a>).
+    $endif$
   </p>
 </footer>

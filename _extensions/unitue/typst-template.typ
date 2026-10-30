@@ -78,12 +78,16 @@
   // unitue-Optionen
   faculty: none,
   institute: none,
+  university: [Eberhard Karls Universität Tübingen],
   ut-logo: none,
   particles: false,
   particles-seed: 7,
   accent: none,
   author-label: "Autor",
   date-label: "Datum",
+  license: none,
+  license-url: "",
+  license-label: "Lizenz",
   doc,
 ) = {
   let akzent = if accent != none { rgb(content-to-string(accent)) } else { ut-karminrot }
@@ -99,7 +103,7 @@
       line(length: 100%, stroke: 1.2pt + ut-mattgold)
       v(-2mm)
       grid(columns: (1fr, auto),
-        [Eberhard Karls Universität Tübingen#if institute != none [ · #institute]],
+        [#university#if institute != none [ · #institute]],
         counter(page).display())
     },
     footer-descent: 6mm,
@@ -174,16 +178,28 @@
               link("https://orcid.org/" + a.orcid, text(font: "Academicons", fill: rgb("#A6CE39"), size: 1.05em, "\u{e9d9}"))
             }
             linebreak()
-            // Affiliation nur zeigen, wenn sie sich vom vorigen Autor unterscheidet
-            let prev = if i > 0 { authors.at(i - 1).affiliation } else { none }
-            if a.affiliation != [] and a.affiliation != none and a.affiliation != prev {
+            let strs(x) = if x == none { "" } else { let r = content-to-string(x); if r == none { "" } else { r } }
+            // Quarto legt `department` zusätzlich als eigene Affiliation ab; dieser
+            // Doppeleintrag wird übersprungen.
+            let deps = a.affiliation.map(f => strs(f.department)).filter(d => d != "")
+            let affs = a.affiliation
+              .filter(f => strs(f.name) != "" and not deps.contains(strs(f.name)))
+              .map(f => {
+                let d = strs(f.department)
+                if d == "" { strs(f.name) } else { strs(f.name) + ", " + d }
+              })
+            if affs.len() > 0 {
               h(18mm)
-              text(size: 0.85em, fill: ut-anthrazit.transparentize(25%), a.affiliation)
+              text(size: 0.85em, fill: ut-anthrazit.transparentize(25%), affs.join("; "))
               linebreak()
             }
           }
         }
-        #if date != none { keyword(date-label); date }
+        #if date != none { keyword(date-label); date; linebreak() }
+        #if license != none {
+          keyword(license-label)
+          if license-url != "" { link(license-url, license) } else { license }
+        }
       ]
       if particles {
         layout(size => {

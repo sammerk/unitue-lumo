@@ -10,7 +10,7 @@ $if(by-author)$
 $for(by-author)$
 $if(it.name.literal)$
     ( name: [$it.name.literal$],
-      affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],
+      affiliation: ($for(it.affiliations)$( name: [$it.name$], department: [$it.department$] ),$endfor$),
       email: [$it.email$],
       orcid: "$it.orcid$" ),
 $endif$
@@ -49,6 +49,9 @@ $endif$
 $if(faculty)$
   faculty: [$faculty$],
 $endif$
+$if(ut-university)$
+  university: [$ut-university$],
+$endif$
 $if(institute)$
   institute: [$institute$],
 $endif$
@@ -64,8 +67,15 @@ $endif$
 $if(primary-color)$
   accent: [$primary-color$],
 $endif$
+$if(license)$
+  license: [$if(license.text)$$license.text$$else$$license$$endif$],
+  license-url: "$if(license.url)$$license.url$$endif$",
+$endif$
 $if(author-label)$
   author-label: [$author-label$],
+$endif$
+$if(license-label)$
+  license-label: [$license-label$],
 $endif$
 $if(date-label)$
   date-label: [$date-label$],
