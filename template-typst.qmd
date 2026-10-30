@@ -46,16 +46,28 @@ scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ..
 ## Lorem ipsum
 
 ::: {.column-margin}
-Stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor sit amet.
+*Stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor sit amet.*
 :::
 
 Lorem ipsum dolor sit amet, `consetetur` sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in [hendrerit](https://example.org) in vulputate velit esse molestie consequat.
-
 > Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in [hendrerit](https://example.org) in vulputate velit esse molestie consequat.
 
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+
+### Justo duo dolores
+
+```{r}
+#| label: fig-rand
+#| column: margin
+#| fig-cap: "Et ea rebum stet clita."
+#| fig-width: 3
+#| fig-height: 3
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(colour = ut_palette[["karminrot"]], alpha = 0.7) +
+  labs(x = "Lorem (l)", y = "Ipsum (mpg)") +
+  theme_minimal(base_family = "Arial")
+```
 
 
 ## Dolor sit amet
@@ -104,20 +116,6 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 ```
 
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, `consetetur` sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-
-### Justo duo dolores
-
-```{r}
-#| label: fig-rand
-#| column: margin
-#| fig-cap: "Et ea rebum stet clita."
-#| fig-width: 3
-#| fig-height: 3
-ggplot(mpg, aes(displ, hwy)) +
-  geom_point(colour = ut_palette[["karminrot"]], alpha = 0.7) +
-  labs(x = "Lorem (l)", y = "Ipsum (mpg)") +
-  theme_minimal(base_family = "Arial")
-```
 
 ## Kasd gubergren
 
