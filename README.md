@@ -133,3 +133,13 @@ Protanopie. Ab etwa 5 Gruppen sollten zusätzlich Formen oder Linientypen genutz
 Das Corporate Design der Universität Tübingen und die Wort-Bild-Marke dürfen laut
 CD-Leitfaden nur von Beschäftigten der Universität verwendet werden, die im Namen der
 Universität kommunizieren.
+
+## Report als PDF (`unitue-typst`)
+
+```yaml
+format:
+  unitue-typst:
+    particles: true   # statisches Partikelnetz im Titelbereich
+```
+
+Siehe `template-typst.qmd`. Unterstützt `institute`, `faculty`, `primary-color`, `author-label`, `date-label` und `particles`.

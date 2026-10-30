@@ -1,0 +1,116 @@
+---
+title: "Titel des Berichts"
+subtitle: "Ein Quarto-Format im Corporate Design der Eberhard Karls Universität Tübingen – angelehnt an Lumo."
+author: "Prof. Dr. Samuel Merk"
+date: last-modified
+format:
+  unitue-typst:
+    # Alle folgenden Optionen sind optional
+    institute: "Institut für Erziehungswissenschaft"
+    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+    particles: true           # statisches Netz in Mattgold im Titelbereich
+    particles-seed: 2505        # andere Zahl = anderes Netz
+    # primary-color: "#0069AA"  # Akzentfarbe überschreiben
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(ggplot2)
+
+ut_palette <- c(
+  karminrot = "#A51E37", mattgold = "#B4A069", anthrazit = "#32414B",
+  blau = "#0069AA", hellblau = "#50AAC8", violett = "#AF6E96",
+  ziegel = "#C8503C", ocker = "#D29600"
+)
+scale_colour_ut <- function(...) scale_colour_manual(values = unname(ut_palette), ...)
+scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ...)
+```
+
+## Einleitung
+::: {.column-margin}
+Randnotizen eignen sich für Hinweise, Quellen oder kleine Abbildungen.
+:::
+
+Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund. Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund.
+
+
+## Ergebnisse
+
+### Eine Abbildung
+
+```{r}
+#| label: fig-beispiel
+#| fig-cap: "Beispielabbildung in den Farben der Universität Tübingen."
+ggplot(mpg, aes(displ, hwy, colour = drv, shape = drv)) +
+  geom_point(size = 2, alpha = 0.8) +
+  scale_colour_ut() +
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb", shape = "Antrieb") +
+  theme_minimal(base_family = "Arial")
+```
+
+
+## Tabelle
+
+```{r}
+knitr::kable(head(mtcars[, 1:5]))
+```
+
+## Zusammenfassung
+
+```{r}
+summary(mtcars$mpg)
+```
+
+:::
+
+
+### Abbildung über die volle Breite
+
+```{r}
+#| label: fig-voll
+#| column: page-right
+#| fig-cap: "Abbildung über Textkörper und Randspalte."
+#| fig-width: 11
+#| fig-height: 3.5
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+  geom_point(size = 2, alpha = 0.8) +
+  scale_colour_ut() +
+  facet_wrap(~drv, nrow = 1) +
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Klasse") +
+  theme_minimal(base_family = "Arial")
+```
+
+Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund. Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund.
+
+### Abbildung in der Randspalte
+
+```{r}
+#| label: fig-rand
+#| column: margin
+#| fig-cap: "Hubraum und Verbrauch."
+#| fig-width: 3
+#| fig-height: 3
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(colour = ut_palette[["karminrot"]], alpha = 0.7) +
+  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)") +
+  theme_minimal(base_family = "Arial")
+```
+
+## Hinweise
+
+::: {.callout-note}
+Ein Hinweis in blau (Sekundärfarbe).
+:::
+
+::: {.callout-tip}
+Ein Tipp in hellgrün (Sekundärfarbe).
+:::
+
+::: {.callout-important}
+Etwas Wichtiges in karminrot.
+:::
+
+::: {.callout-warning}
+Eine Warnung in ocker.
+:::

@@ -22,6 +22,29 @@ contributes:
       logo: ut-logo.png
       faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
       institute: "Institut für Erziehungswissenschaft"
+    typst:
+      lang: de
+      toc: false
+      keep-typ: false
+      papersize: a4
+      margin:
+        x: 20mm
+        y: 22mm
+      margin-geometry:
+        inner: {far: 20mm, width: 0mm, separation: 0mm}
+        outer: {far: 8mm, width: 55mm, separation: 7mm}
+        clearance: 8pt
+      fontsize: 10.5pt
+      format-resources:
+        - ut-logo.png
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+        - page.typ
+      ut-logo: ut-logo.png
+      particles: false
+      faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+      institute: "Institut für Erziehungswissenschaft"
     revealjs:
       lang: de
       theme: [default, unitue-revealjs.scss]
