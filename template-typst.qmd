@@ -10,6 +10,14 @@ author:
         city: Tübingen
         country: Deutschland
         url: https://uni-tuebingen.de
+  - name: "Prof. Dr. Zweitautorin"
+    orcid: 0000-0003-2594-1234
+    affiliation:
+      - name: "Eberhard Karls Universität Tübingen"
+        department: "Institut für Erziehungswissenschaft"
+        city: Tübingen
+        country: Deutschland
+        url: https://uni-tuebingen.de
 date: last-modified
 format:
   unitue-typst:
@@ -17,7 +25,7 @@ format:
     institute: "Institut für Erziehungswissenschaft"
     faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
     particles: true           # statisches Netz in Mattgold im Titelbereich
-    particles-seed: 2505        # andere Zahl = anderes Netz
+    particles-seed: 7        # andere Zahl = anderes Netz
     # primary-color: "#0069AA"  # Akzentfarbe überschreiben
 ---
 
