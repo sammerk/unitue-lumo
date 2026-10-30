@@ -35,6 +35,14 @@
   }
 }
 
+// Randnotiz ohne nachfolgendes Leerzeichen: Quarto emittiert `#note(...)[...]`
+// gefolgt von einem Zeilenumbruch, der sonst die erste Absatzzeile einrückt.
+#let ut-note = note
+#let note(..args) = ut-note(..args) + context {
+  let w = measure[a b].width - measure[ab].width
+  h(-w)
+}
+
 #let article(
   title: none,
   subtitle: none,
@@ -103,6 +111,14 @@
   show raw: set text(font: codefont) if codefont != none
 
   set heading(numbering: sectionnumbering)
+
+  // Blockzitate: roter Balken links, kursiv
+  show quote.where(block: true): it => pad(left: 10mm, block(
+    width: 100%,
+    inset: (left: 12pt, y: 4pt),
+    stroke: (left: 3pt + ut-karminrot),
+    text(style: "italic", it.body),
+  ))
   show link: set text(fill: akzent)
   show ref: set text(fill: akzent)
 

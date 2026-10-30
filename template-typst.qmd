@@ -1,6 +1,6 @@
 ---
-title: "Titel des Berichts"
-subtitle: "Ein Quarto-Format im Corporate Design der Eberhard Karls Universität Tübingen – angelehnt an Lumo."
+title: "Lorem ipsum dolor sit amet"
+subtitle: "Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
 author:
   - name: "Prof. Dr. Samuel Merk"
     orcid: 0000-0003-2594-5337
@@ -43,90 +43,96 @@ scale_colour_ut <- function(...) scale_colour_manual(values = unname(ut_palette)
 scale_fill_ut <- function(...) scale_fill_manual(values = unname(ut_palette), ...)
 ```
 
-## Einleitung
+## Lorem ipsum
+
 ::: {.column-margin}
-Randnotizen eignen sich für Hinweise, Quellen oder kleine Abbildungen.
+Stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor sit amet.
 :::
 
-Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund. Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund.
+Lorem ipsum dolor sit amet, `consetetur` sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in [hendrerit](https://example.org) in vulputate velit esse molestie consequat.
+
+> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in [hendrerit](https://example.org) in vulputate velit esse molestie consequat.
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
 
 
-## Ergebnisse
+## Dolor sit amet
 
-### Eine Abbildung
+### Consetetur sadipscing
 
 ```{r}
 #| label: fig-beispiel
-#| fig-cap: "Beispielabbildung in den Farben der Universität Tübingen."
+#| fig-cap: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
 ggplot(mpg, aes(displ, hwy, colour = drv, shape = drv)) +
   geom_point(size = 2, alpha = 0.8) +
   scale_colour_ut() +
-  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Antrieb", shape = "Antrieb") +
+  labs(x = "Lorem (l)", y = "Ipsum (mpg)", colour = "Dolor", shape = "Dolor") +
   theme_minimal(base_family = "Arial")
 ```
 
 
-## Tabelle
+## Tempor invidunt
 
 ```{r}
 knitr::kable(head(mtcars[, 1:5]))
 ```
 
-## Zusammenfassung
+## Eirmod tempor
 
 ```{r}
 summary(mtcars$mpg)
 ```
 
-:::
 
 
-### Abbildung über die volle Breite
+### Magna aliquyam erat
 
 ```{r}
 #| label: fig-voll
 #| column: page-right
-#| fig-cap: "Abbildung über Textkörper und Randspalte."
+#| fig-cap: "Sed diam voluptua at vero eos et accusam."
 #| fig-width: 11
 #| fig-height: 3.5
 ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point(size = 2, alpha = 0.8) +
   scale_colour_ut() +
   facet_wrap(~drv, nrow = 1) +
-  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)", colour = "Klasse") +
+  labs(x = "Lorem (l)", y = "Ipsum (mpg)", colour = "Sit") +
   theme_minimal(base_family = "Arial")
 ```
 
-Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund. Dieses Dokument zeigt, wie ein Bericht im `unitue`-Format aussieht. Es übernimmt die Grundideen von [Lumo](https://github.com/holtzy/lumo) – Inhaltsverzeichnis links, eingeklappter Code, ruhige Typografie – und setzt sie im Corporate Design der Universität Tübingen um: Karminrot, Mattgold und Anthrazit, Arial als Schrift und die Wort-Bild-Marke auf weißem Grund.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, `consetetur` sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 
-### Abbildung in der Randspalte
+### Justo duo dolores
 
 ```{r}
 #| label: fig-rand
 #| column: margin
-#| fig-cap: "Hubraum und Verbrauch."
+#| fig-cap: "Et ea rebum stet clita."
 #| fig-width: 3
 #| fig-height: 3
 ggplot(mpg, aes(displ, hwy)) +
   geom_point(colour = ut_palette[["karminrot"]], alpha = 0.7) +
-  labs(x = "Hubraum (l)", y = "Verbrauch (mpg)") +
+  labs(x = "Lorem (l)", y = "Ipsum (mpg)") +
   theme_minimal(base_family = "Arial")
 ```
 
-## Hinweise
+## Kasd gubergren
 
 ::: {.callout-note}
-Ein Hinweis in blau (Sekundärfarbe).
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
 :::
 
 ::: {.callout-tip}
-Ein Tipp in hellgrün (Sekundärfarbe).
+Sed diam nonumy eirmod tempor invidunt ut labore.
 :::
 
 ::: {.callout-important}
-Etwas Wichtiges in karminrot.
+At vero eos et accusam et justo duo dolores.
 :::
 
 ::: {.callout-warning}
-Eine Warnung in ocker.
+Stet clita kasd gubergren, no sea takimata.
 :::
