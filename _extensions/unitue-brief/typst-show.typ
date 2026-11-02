@@ -67,5 +67,8 @@ $endif$
 $if(enclosures)$
   enclosures: [$enclosures$],
 $endif$
+$if(signature)$
+  signature: image("$signature$", height: 12.5mm),
+$endif$
   doc,
 )

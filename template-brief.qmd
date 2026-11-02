@@ -27,6 +27,7 @@ format:
     letter-date: "today"
     salutation: "Sehr geehrte Damen und Herren,"
     closing: "Mit freundlichen Grüßen"
+    signature: "Unterschrift-zugeschnitten.png"
 ---
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.

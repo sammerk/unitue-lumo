@@ -29,6 +29,7 @@
   subject: none,
   salutation: "Sehr geehrte Damen und Herren,",
   closing: "Mit freundlichen Grüßen",
+  signature: none,
   enclosures: none,
   doc,
 ) = {
@@ -99,7 +100,12 @@
   doc
   v(8mm, weak: true)
   if closing != none { [#closing] }
-  v(14mm, weak: true)
+  if signature != none {
+    v(4mm, weak: true)
+    signature
+  } else {
+    v(14mm, weak: true)
+  }
   if sender-name != none { [#sender-name] }
   if enclosures != none {
     v(8mm, weak: true)
