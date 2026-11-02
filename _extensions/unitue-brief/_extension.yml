@@ -13,6 +13,7 @@ contributes:
       fontsize: 10.5pt
       format-resources:
         - ut-logo.png
+        - Unterschrift-zugeschnitten.png
       template-partials:
         - typst-template.typ
         - typst-show.typ
