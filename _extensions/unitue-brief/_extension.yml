@@ -1,0 +1,18 @@
+title: unitue-brief
+author: Samuel Merk
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    typst:
+      lang: de
+      filters:
+        - unitue-lang.lua
+      keep-typ: false
+      papersize: a4
+      fontsize: 10.5pt
+      format-resources:
+        - ut-logo.png
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ

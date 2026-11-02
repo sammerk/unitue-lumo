@@ -1,0 +1,34 @@
+---
+title: "Betreff des Schreibens"
+author:
+  - name: "Samuel Merk"
+    affiliation:
+      - name: "Eberhard Karls Universität Tübingen"
+        department: "Institut für Erziehungswissenschaft"
+lang: de
+date: last-modified
+format:
+  unitue-brief-typst:
+    faculty: "Wirtschafts- und Sozialwissenschaftliche Fakultät"
+    institute: "Institut für Erziehungswissenschaft"
+    sender-name: "Prof. Dr. Samuel Merk"
+    contact-name: "Prof. Dr. Samuel Merk"
+    contact-function: "Lehrstuhl für Professionsforschung"
+    phone: "+49 7071 29-72729"
+    email: "samuel.merk@uni-tuebingen.de"
+    # web: "https://uni-tuebingen.de"
+    # reference: "000/000/000"
+    street: "Münzgasse 30"
+    city: "72070 Tübingen"
+    recipient:
+      - "Vorname Nachname"
+      - "Straße Hausnummer"
+      - "PLZ Ort"
+    letter-date: "today"
+    salutation: "Sehr geehrte Damen und Herren,"
+    closing: "Mit freundlichen Grüßen"
+---
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
